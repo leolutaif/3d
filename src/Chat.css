@@ -1,0 +1,321 @@
+:root {
+    --primary-color: rgba(0, 0, 0, 0.9);
+    --secondary-color: rgba(255, 255, 255, 0.1);
+    --highlight-color: #203472;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --text-color: #fff;
+    --button-bg-color: #203472;
+    --button-text-color: #fff;
+    --input-bg-color: rgba(255, 255, 255, 0.1);
+    --input-border-color: rgba(255, 255, 255, 0.2);
+    --input-focus-border-color: #203472;
+    --message-bg-color: rgba(255, 255, 255, 0.1);
+    --my-message-bg-color: #203472;
+    --my-message-text-color: #fff;
+    --message-text-color: #fff;
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+  }
+  
+  .chat-container {
+    width: 50vw;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+  
+  .join-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .join-container h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .join-container input {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .join-container input:focus {
+    border-color: var(--input-focus-border-color);
+  }
+  
+  .join-container button {
+    padding: 12px 25px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .join-container button:hover {
+    background-color: darken(var(--button-bg-color), 10%);
+  }
+  
+  .chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .title-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .title-bar-text {
+    flex: 1;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+  }
+  
+  .my-message {
+    align-self: flex-end;
+  }
+  
+  .message-content {
+    background-color: var(--message-bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--message-text-color);
+    backdrop-filter: blur(5px);
+  }
+  
+  .my-message .message-content {
+    background-color: var(--my-message-bg-color);
+    color: var(--my-message-text-color);
+  }
+  
+  .message-nickname {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--highlight-color);
+  }
+  
+  .message-image {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .message-time {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 5px;
+    align-self: flex-start;
+  }
+  
+  .my-message .message-time {
+    align-self: flex-end;
+  }
+  
+  .status-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid var(--shadow-color);
+  }
+  
+  .status-bar input[type='text'] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .status-bar input[type='text']:focus {
+    border-color: var(--input-focus-border-color);
+  }
+  
+  .status-bar button {
+    padding: 12px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .status-bar button:hover {
+    background-color: #17a74a;
+  }
+  
+  .image-preview {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid var(--input-border-color);
+  }
+  
+  .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-upload-label {
+    color: var(--text-color);
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .load {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Ajustes para responsividade */
+  @media (max-width: 600px) {
+    .chat-container {
+      height: 100vh;
+      border-radius: 0;
+    }
+  
+    .status-bar input[type='text'] {
+      font-size: 14px;
+    }
+  
+    .status-bar button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  .tokenCA{
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #203472;
+    transition: 0.5s;
+  }
+
+  .tokenCA:hover{
+    color: #3456b9;
+    transition: 0.5s;
+  }
+
+  .tokenLinks a{
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #203472;
+    text-decoration: none;
+  }
+
+  .tokenLinks a:hover{
+    color: #3456b9;
+  }
+
+  .tokenLinks{
+    max-width: 300px;
+  }
+
+  .tokenName{
+    color: white;
+  }
+
+  .copy-message {
+  margin-top: 5px;
+  color: var(--text-color);
+  font-size: 14px;
+  animation: fadeInOut 2s forwards;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
