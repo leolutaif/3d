@@ -1,22 +1,22 @@
 :root {
     --primary-color: rgba(0, 0, 0, 0.9);
     --secondary-color: rgba(255, 255, 255, 0.1);
-    --highlight-color: ##ff31a0;
+    --highlight-color: #551a8b;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --text-color: #fff;
-    --button-bg-color: ##ff31a0;
+    --button-bg-color: #551a8b;
     --button-text-color: #fff;
     --input-bg-color: rgba(255, 255, 255, 0.1);
     --input-border-color: rgba(255, 255, 255, 0.2);
-    --input-focus-border-color: ##ff31a0;
+    --input-focus-border-color: #551a8b;
     --message-bg-color: rgba(255, 255, 255, 0.1);
-    --my-message-bg-color: ##ff31a0;
+    --my-message-bg-color: #551a8b;
     --my-message-text-color: #fff;
     --message-text-color: #fff;
   }
   
   body {
-    background-color: #ff31a0;
+    background-color:#551a8b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
   }
